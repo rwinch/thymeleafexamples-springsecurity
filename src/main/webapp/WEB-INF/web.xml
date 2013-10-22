@@ -7,6 +7,19 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+
+    <context-param>
+      <param-name>contextClass</param-name>
+      <param-value>
+          org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+      </param-value>
+    </context-param>
+    <!-- Again, config locations must consist of one or more comma- or space-delimited
+         and fully-qualified @Configuration classes -->
+    <context-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>thymeleafexamples.config.SecurityConfiguration</param-value>
+    </context-param>
     <!-- Spring MVC front controller -->
     <servlet>
         <servlet-name>spring</servlet-name>
